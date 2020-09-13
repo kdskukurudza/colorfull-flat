@@ -1,0 +1,61 @@
+.team {
+    @media screen and (min-width: 320px) {
+        padding: 66px 0;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 132px 0;
+    }
+    &__title {
+        @include title(#333333, center);
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (min-width: 320px) {
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width: 1024px) {
+            flex-wrap: nowrap;
+        }
+    }
+    &__item {
+        @media screen and (min-width: 320px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 50px 0 50px;
+            &:hover {
+                .team__desc {
+                    color: transparentize($black-80, 0);
+                }
+            }
+        }
+    }
+    &__name {
+        @media screen and (min-width: 320px) {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            margin: 18px 0 15px;
+        }
+    }
+    &__position {
+        @media screen and (min-width: 320px) {
+            font-size: 1rem;
+            text-transform: capitalize;
+            font-weight: 900;
+            color: $sky-blue;
+        }
+    }
+    &__desc {
+        @media screen and (min-width: 320px) {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: transparentize($black-80, 0.2);            
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 1.25rem;
+        }
+    }
+}

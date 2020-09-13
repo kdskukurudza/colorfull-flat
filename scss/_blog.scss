@@ -1,0 +1,112 @@
+.blog {
+    @media screen and (min-width: 320px) {
+        padding: 65px 0 60px;
+        background: #f4f4f4
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 130px 0 120px;
+    }
+    &__title {
+        @include title(#333333, center);
+        &--small {
+            @media screen and (min-width: 320px) {
+                text-align: left;
+                color: #333333;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    &__subtitle {
+        @include subtitle($black-80, center);        
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (min-width: 320px) {
+            flex-wrap: wrap;
+            margin: 67px 0 0;
+        }
+        @media screen and (min-width: 1024px) {
+            flex-wrap: nowrap;
+        }
+    }
+    &__item {
+        @media screen and (min-width: 320px) {
+            margin: 15px 0;
+        }
+        @media screen and (min-width: 1024px) {
+            margin: 0 30px 0 0;
+        }
+        &:hover {                   
+            .blog__link {
+                display: flex;
+            }
+            .blog__desc {
+                display: block;
+            }
+            .blog__img {
+                opacity: 0.8;               
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__desc {        
+        @media screen and (min-width: 320px) {
+            display: none;
+            position: absolute;
+            left: 28px;
+            bottom: 0;
+        }
+        @media screen and (min-width: 1024px) {
+            left: 34px;
+            bottom: 28px;
+        }
+    }
+    &__time {
+        font-weight: 900;
+        color: #333333;
+        margin: 0;
+    }
+    &__link {                
+        @media screen and (min-width: 320px) {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: absolute;        
+            z-index: 2;        
+            text-decoration: none;
+            color: #333333;
+            background: $sky-blue;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            top: 10px;
+            right: 26px;
+            font-size: 1rem;
+        }
+        @media screen and (min-width: 1024px) {
+            width: 46px;
+            height: 46px;
+            top: 25px;
+            right: 23px;
+            font-size: 1.5rem;
+        }
+        &:hover {
+            text-decoration: none;
+            cursor: pointer;
+        }        
+    }
+    &__icon {
+        &::before {
+            content: '\e89e';
+        }
+    }
+}

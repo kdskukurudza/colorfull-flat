@@ -1,0 +1,79 @@
+.features {
+    padding: 134px 0 0;
+    background: #f1f1f1;
+    @media screen and (min-width: 320px) {
+        padding: 67px 0 0;
+    }
+    &__title {
+        @include title(#333333, center);
+        &--small {
+            @media screen and (min-width: 320px) {
+                font-size: 1.25rem;
+                text-transform: capitalize;
+                font-weight: 400;
+                color: #333333;
+            }
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+            }            
+        }
+    }
+    &__subtitle {
+        @include subtitle($black-80, center);
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (min-width: 320px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media screen and (min-width: 1024px) {
+            flex-wrap: nowrap;
+        }
+    }
+    &__left {
+        @media screen and (min-width: 320px) {
+            margin: 0 0 63px 0;
+        }
+    }
+    &__item {
+        @media screen and (min-width: 320px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;            
+            text-align: center;
+            margin: 40px 0 40px;
+            &:hover {
+                .features__icon {
+                    color: transparentize(#333333, 0.5);
+                }
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            flex-wrap: nowrap;
+            text-align: left;            
+        }
+    }
+    &__icon {
+        @media screen and (min-width: 320px) {
+            font-size: 3rem;
+            color: transparentize(#333333, 0.8);
+            margin: 0 0 20px 0;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 4.5rem;
+            margin: 0 28px 0 0;
+        }
+    }
+    &__right {
+        background-image: url('../img/guy.png');
+        background-size: cover;
+        @media screen and (min-width: 320px) {
+            display: none;
+        }   
+        @media screen and (min-width: 1024px) {
+            display: block;
+        }    
+    }
+}
